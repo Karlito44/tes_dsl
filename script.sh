@@ -6,7 +6,7 @@
 			name=$(echo $file | tr "./" " ")
 			for word in $name
 				do
-    				echo "Nouveau DSL :$word" 
+    				echo "Nouveau DSL : $word" 
 					break
 				done
 		}
