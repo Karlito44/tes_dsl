@@ -4,7 +4,11 @@
 			file="$(find . -name "*.mydsl")"
 			# name = $file
 			name=$(echo $file | tr "./" " ")
-			echo "Nouveau DSL :$name" 
+			for word in $name
+				do
+    				echo "Nouveau DSL :$word" 
+					break
+				done
 		}
 		msg=$(getName)
 		echo $msg
