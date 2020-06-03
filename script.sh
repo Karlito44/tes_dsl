@@ -3,8 +3,9 @@
 			# delimiter = "/"
 			file="$(find . -name "*.mydsl")"
 			# name = $file
-			name=$(echo $file | tr "/" " ")
-			name=$(echo $name | tr "." " ")
+			name=$(echo $file | tr "/" "")
+			name=$(echo $name | tr "." "")
+			name=$(echo $file | tr "mydsl" "")
 			echo "Nouveau DSL : $name" 
 		}
 		msg=$(getName)
