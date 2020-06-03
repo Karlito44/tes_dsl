@@ -3,12 +3,13 @@
 			# delimiter = "/"
 			file="$(find . -name "*.mydsl")"
 			# name = $file
-			return "Nouvelle version $file" 
+			echo "Nouveau DSL : $file" 
 		}
 		# getName > sortie.txt
-		git init
+		msg=$(getName)
+		echo $msg
+		# git init
 		git add .
-		git commit -m getName
-		git remote add origin https://github.com/Karlito44/tes_dsl
-		git push -f --set-upstream origin master
-		
+		git commit -m "$msg"
+		# git remote add origin https://github.com/Karlito44/tes_dsl
+		git push -f
